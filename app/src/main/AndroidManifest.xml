@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kkuber.myapp_05_frame">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>  // 최근에는 권한 팝업을 사용하도록 변경됨
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
