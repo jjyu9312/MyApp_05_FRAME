@@ -60,6 +60,7 @@ class MainActivity : AppCompatActivity() {
                     // todo 교육용 팝업 확인 후 권한 팝업을 띄우는 기능
                     showPermissionContextPopup()
                     println()
+                    println()
                 } else -> {
                     requestPermissions(arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 1000)
                 }
