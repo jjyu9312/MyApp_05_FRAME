@@ -59,6 +59,7 @@ class MainActivity : AppCompatActivity() {
                 shouldShowRequestPermissionRationale(android.Manifest.permission.READ_EXTERNAL_STORAGE) -> { // 권한이 없을 때 교육용 팝업 띄우기 위한 함수
                     // todo 교육용 팝업 확인 후 권한 팝업을 띄우는 기능
                     showPermissionContextPopup()
+                    println()
                 } else -> {
                     requestPermissions(arrayOf(android.Manifest.permission.READ_EXTERNAL_STORAGE), 1000)
                 }
