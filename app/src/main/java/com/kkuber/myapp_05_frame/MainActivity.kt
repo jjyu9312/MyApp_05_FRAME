@@ -5,12 +5,14 @@ import android.content.pm.PackageManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
+import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
 
@@ -93,6 +95,7 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(Intent.ACTION_GET_CONTENT) // SAF 기능을 실행시켜 컨텐츠를 가져오는 안드로이드 내장 액티비티 실행시킴
         intent.type = "image/*"
         startActivityForResult(intent, 2000)
+        Log.d("navigatePhotos", " images : ");
     }
 
     @RequiresApi(Build.VERSION_CODES.M)
