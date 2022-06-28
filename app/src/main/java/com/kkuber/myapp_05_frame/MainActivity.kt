@@ -1,7 +1,9 @@
 package com.kkuber.myapp_05_frame
 
+import android.app.Activity
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -33,6 +35,10 @@ class MainActivity : AppCompatActivity() {
             add(findViewById(R.id.imageView22))
             add(findViewById(R.id.imageView23))
         }
+    }
+
+    private val imageViewList: List<ImageView> by lazy {
+        mutableListOf()
     }
 
     @RequiresApi(Build.VERSION_CODES.M)
@@ -95,7 +101,27 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(Intent.ACTION_GET_CONTENT) // SAF 기능을 실행시켜 컨텐츠를 가져오는 안드로이드 내장 액티비티 실행시킴
         intent.type = "image/*"
         startActivityForResult(intent, 2000)
-        Log.d("navigatePhotos", " images : ");
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode != Activity.RESULT_OK) {
+            return
+        }
+
+        when (resultCode) {
+            2000 -> {
+                val selectedImageUrl: Uri? = data?.data
+                if (selectedImageUrl != null) {
+                    imageUriList.add(selectedImageUrl)
+
+                }
+
+            }
+            else -> {
+                Toast.makeText(this, "사진을 가져오지 못했습니다.", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     @RequiresApi(Build.VERSION_CODES.M)
