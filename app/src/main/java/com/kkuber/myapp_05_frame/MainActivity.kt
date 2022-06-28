@@ -114,6 +114,7 @@ class MainActivity : AppCompatActivity() {
                 val selectedImageUrl: Uri? = data?.data
                 if (selectedImageUrl != null) {
                     imageUriList.add(selectedImageUrl)
+                    Log.d("", " : ");
 
                 }
 
