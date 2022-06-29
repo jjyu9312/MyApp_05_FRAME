@@ -37,9 +37,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private val imageViewList: List<ImageView> by lazy {
-        mutableListOf()
-    }
+    private val imageUriList: MutableList<Uri> = mutableListOf()
+
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -113,7 +112,14 @@ class MainActivity : AppCompatActivity() {
             2000 -> {
                 val selectedImageUrl: Uri? = data?.data
                 if (selectedImageUrl != null) {
+
+                    if (imageUriList.size == 6) {
+                        Toast.makeText(this, "이미 사진이 가득 찼습니다.", Toast.LENGTH_SHORT).show()
+                    }
+
                     imageUriList.add(selectedImageUrl)
+                    imageViewList[imageUriList.size - 1].setImageURI(selectedImageUrl)
+
                     Log.d("", " : ");
 
                 }
