@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
     private val imageViewList: List<ImageView> by lazy {
         mutableListOf<ImageView>().apply {
+
             add(findViewById(R.id.imageView11))
             add(findViewById(R.id.imageView12))
             add(findViewById(R.id.imageView13))
