@@ -121,7 +121,6 @@ class MainActivity : AppCompatActivity() {
                     imageUriList.add(selectedImageUrl)
                     imageViewList[imageUriList.size - 1].setImageURI(selectedImageUrl)
                 }
-
             }
             else -> {
                 Toast.makeText(this, "사진을 가져오지 못했습니다.", Toast.LENGTH_SHORT).show()
