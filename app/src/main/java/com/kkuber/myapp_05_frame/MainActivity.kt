@@ -120,7 +120,6 @@ class MainActivity : AppCompatActivity() {
 
                     imageUriList.add(selectedImageUrl)
                     imageViewList[imageUriList.size - 1].setImageURI(selectedImageUrl)
-
                 }
             }
             else -> {
