@@ -26,6 +26,7 @@ class PhotoFrameActivity: AppCompatActivity() {
         setContentView(R.layout.activity_photoframe)
 
         getPhotoUriFromIntent()
+        startTimer()
     }
 
     private fun getPhotoUriFromIntent() {
