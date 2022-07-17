@@ -3,8 +3,10 @@ package com.kkuber.myapp_05_frame
 import android.net.Uri
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
+import java.util.*
 import kotlin.concurrent.timer
 
 class PhotoFrameActivity: AppCompatActivity() {
@@ -12,6 +14,8 @@ class PhotoFrameActivity: AppCompatActivity() {
     private val photoList = mutableListOf<Uri>()
 
     private var currentPosition = 0
+
+    private var timer: Timer? = null
 
     private val photoImageView: ImageView by lazy {
         findViewById<ImageView>(R.id.PhotoImageView)
@@ -57,4 +61,23 @@ class PhotoFrameActivity: AppCompatActivity() {
             }
         }
     }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("PhotoFrame", "onStop : timer cancel");
+        timer?.cancel()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("PhotoFrame", "onStart : timer start");
+        startTimer()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("PhotoFrame", "onDestroy : timer cancel");
+        timer?.cancel()
+    }
+
 }
