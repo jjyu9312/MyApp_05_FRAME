@@ -79,5 +79,4 @@ class PhotoFrameActivity: AppCompatActivity() {
         Log.d("PhotoFrame", "onDestroy : timer cancel");
         timer?.cancel()
     }
-
 }
