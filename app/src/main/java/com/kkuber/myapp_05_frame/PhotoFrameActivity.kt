@@ -66,17 +66,20 @@ class PhotoFrameActivity: AppCompatActivity() {
         super.onStop()
         Log.d("PhotoFrame", "onStop : timer cancel");
         timer?.cancel()
+
     }
 
     override fun onStart() {
         super.onStart()
         Log.d("PhotoFrame", "onStart : timer start");
         startTimer()
+
     }
 
     override fun onDestroy() {
         super.onDestroy()
         Log.d("PhotoFrame", "onDestroy : timer cancel");
         timer?.cancel()
+
     }
 }
