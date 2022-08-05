@@ -48,6 +48,8 @@ class MainActivity : AppCompatActivity() {
 
         initAddPhotoButton()
         initStartPhotoaFrameModeButton()
+
+
     }
 
     private fun initStartPhotoaFrameModeButton() {
