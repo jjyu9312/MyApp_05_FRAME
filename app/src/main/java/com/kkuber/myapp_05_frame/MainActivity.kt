@@ -36,7 +36,6 @@ class MainActivity : AppCompatActivity() {
             add(findViewById(R.id.imageView22))
             add(findViewById(R.id.imageView23))
 
-
         }
     }
 
@@ -50,8 +49,6 @@ class MainActivity : AppCompatActivity() {
 
         initAddPhotoButton()
         initStartPhotoaFrameModeButton()
-
-
     }
 
     private fun initStartPhotoaFrameModeButton() {
