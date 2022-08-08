@@ -35,6 +35,8 @@ class MainActivity : AppCompatActivity() {
             add(findViewById(R.id.imageView21))
             add(findViewById(R.id.imageView22))
             add(findViewById(R.id.imageView23))
+
+
         }
     }
 
