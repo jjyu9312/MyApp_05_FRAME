@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
             add(findViewById(R.id.imageView21))
             add(findViewById(R.id.imageView22))
             add(findViewById(R.id.imageView23))
-
         }
     }
     private val imageUriList: MutableList<Uri> = mutableListOf()
@@ -47,6 +46,10 @@ class MainActivity : AppCompatActivity() {
 
         initAddPhotoButton()
         initStartPhotoaFrameModeButton()
+
+
+
+
     }
 
     private fun initStartPhotoaFrameModeButton() {
