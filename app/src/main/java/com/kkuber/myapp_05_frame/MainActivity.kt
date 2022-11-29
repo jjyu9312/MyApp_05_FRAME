@@ -65,6 +65,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+
+
+
     @RequiresApi(Build.VERSION_CODES.M)
     private fun initAddPhotoButton() {
         addPhotoBurtton.setOnClickListener {
